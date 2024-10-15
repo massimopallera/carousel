@@ -4,10 +4,32 @@
   box-sizing: border-box;
 }
 
+img {
+  width: 100%;
+  display: block;
+  /* height: auto; */
+}
+
 .debug{
   header{
     /* height: 100px; */
   }
+  main > .container{
+    /* height: 500px; */
+    /* background: #000; */
+    border: 1px solid;
+    border-radius: 3px;
+
+    .slide{
+      width: 80%;
+      box-shadow: 0 0 10px 3px #0000007a;
+    }
+  }
+}
+
+
+.box-sh{
+  box-shadow: 0 0 10px 3px #0000007a;
 }
 
 header{
@@ -15,5 +37,22 @@ header{
   background: #ededed;
   h1{
     color: gray;
+  }
+}
+
+main{
+  margin-top: 2rem;
+
+  .container{
+    width: 75%;
+    margin: auto;
+  }
+  .preview{
+    display: flex;
+    justify-content: center;
+  }
+  .slide{
+    width: 80%;
+    box-shadow: 0 0 10px 3px #0000007a;
   }
 }
