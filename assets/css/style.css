@@ -1,3 +1,4 @@
+/* common */
 *{
   margin: 0;
   padding: 0;
@@ -9,28 +10,11 @@ img {
   display: block;
   /* height: auto; */
 }
-
-.debug{
-  header{
-    /* height: 100px; */
-  }
-  main > .container{
-    /* height: 500px; */
-    /* background: #000; */
-    border: 1px solid;
-    border-radius: 3px;
-
-    .slide{
-      /* width: 80%;
-      box-shadow: 0 0 10px 3px #0000007a; */
-    }
-  }
-}
-
-
+/* utilities */
 .box-sh{
   box-shadow: 0 0 10px 3px #0000007a;
 }
+
 
 header{
   padding: 2rem;
@@ -90,7 +74,7 @@ main{
   }
 }
 
-
+/* Animations */
 main{
 
     .next:hover,.prev:hover,.thumbnails > img:hover{
