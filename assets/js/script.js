@@ -2,10 +2,10 @@
 const prevEl = document.querySelector('.prev')
 const nextEl = document.querySelector('.next')
 const slideEl = document.querySelector('.slide')
-
 const thumbs = document.querySelector('.thumbnails')
 
 //📌 Variables
+let activeSlide = 0
 
 //📌 Images Objects
 const images = [
@@ -51,6 +51,51 @@ function generateImg(obj,EtG){
     EtG.appendChild(imageEl)
   }
 }
+
+function next(){
+  activeSlide++
+
+  if(activeSlide >= images.length){
+    activeSlide = 0
+  }
+
+  const {url,title,description} = images[activeSlide]
+
+  let markup = `
+     <img src="${url}" alt="">
+      <div class="desc">
+        <h3>${title}</h3>
+        <p>${description}</p>
+      </div>
+  `
+
+  slideEl.innerHTML = markup
+}
+
+function prev(){
+  activeSlide--
+
+  if(activeSlide < 0){
+    activeSlide = images.length - 1
+  }
+
+  const {url,title,description} = images[activeSlide]
+
+
+  let markup = `
+     <img src="${url}" alt="">
+      <div class="desc">
+        <h3>${title}</h3>
+        <p>${description}</p>
+      </div>
+  `
+
+  slideEl.innerHTML = markup
+}
+
+//EventListeners
+nextEl.addEventListener('click',next)
+prevEl.addEventListener('click',prev)
 
 
 
