@@ -44,15 +44,14 @@ main{
 
     .slide{
       position: relative;
-  
-      /* width: 80%; */
+      /* width: ; */
+      width: 80%;
       
       box-shadow: 0 0 10px 3px #0000007a;
       
       img{
         height: 400px;
         object-fit: cover;
-
       }
 
       .desc{
@@ -68,7 +67,7 @@ main{
   }
 
   .thumbnails{
-    width: 80%;
+    width: 82%;
     margin: auto;
     margin-top: 1.5rem;
 

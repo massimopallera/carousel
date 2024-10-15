@@ -48,9 +48,30 @@ function generateImg(obj,EtG){
     const imageEl = document.createElement('img')
     imageEl.src = obj[i].url
 
+    imageEl.addEventListener('click', function(){
+      console.log(i);
+      printActiveSlide(images[i])
+    })
     EtG.appendChild(imageEl)
+
   }
 }
+
+function printActiveSlide(obj){
+  
+  const {url,title,description} = obj
+
+  const markup = `
+     <img src="${url}" alt="">
+      <div class="desc">
+        <h3>${title}</h3>
+        <p>${description}</p>
+      </div>
+      `
+
+  slideEl.innerHTML = markup
+}
+
 
 function next(){
   activeSlide++
@@ -101,3 +122,4 @@ prevEl.addEventListener('click',prev)
 
 //📌 Main
 generateImg(images,thumbs)
+printActiveSlide(images[0])
